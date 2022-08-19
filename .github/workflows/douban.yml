@@ -25,7 +25,7 @@ jobs:
     - name: book
       uses: lizheming/doumark-action@master
       with:
-        id: music
+        id: wangyunzi
         type: book
         format: csv
         dir: ./data/douban
