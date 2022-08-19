@@ -28,7 +28,52 @@ jobs:
         id: wangyunzi
         type: music
         format: csv
+        dir: ./data/douban# .github/workflows/douban.yml
+name: douban
+on: 
+  schedule:
+  - cron: "0 0,0,12,23 * * *"
+  watch:
+    types: [started]
+
+jobs:
+  douban:
+    name: Douban mark data sync
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: movie
+      uses: lizheming/doumark-action@master
+      with:
+        id: wangyunzi
+        type: movie
+        format: csv
         dir: ./data/douban
+
+    - name: book
+      uses: lizheming/doumark-action@master
+      with:
+        id: wangyunzi
+        type: book
+        format: csv
+        dir: ./data/douban
+        
+     - name: music
+      uses: lizheming/doumark-action@master
+      with:
+        id: wangyunzi
+        type: music
+        format: csv
+        dir: ./data/douban
+  
+    - name: Commit
+      uses: EndBug/add-and-commit@v8
+      with:
+        message: 'chore: update douban data'
+        add: './data/douban'
+
   
     - name: Commit
       uses: EndBug/add-and-commit@v8
