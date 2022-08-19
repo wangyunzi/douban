@@ -1,0 +1,249 @@
+baseURL: https://www.wangyunzi.life/
+defaultContentLanguage: "zh"
+languageCode: zh-cn
+hasCJKLanguage: true # 设定网站有 CJK 字符（中日韩统一表意文字）
+title: 🌻
+paginate: 10
+theme: "hugo-PaperMod"
+
+enableInlineShortcodes: true
+enableEmoji: true # 允许使用 Emoji 表情，建议 true
+enableRobotsTXT: true # 允许爬虫抓取到搜索引擎，建议 true
+
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# googleAnalytics: UA-136094326-1
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    ##title: 长街短梦
+    description: "爱自由"
+    keywords: [王云子, Technology, life, 长街短梦, study]
+    author: "王云子"
+    # author: ["Me", "You"] # multiple authors
+    images: ["<link or path of image for opengraph, twitter-cards>"]
+    DateFormat: "January 2, 2006"
+    #beian: "粤 ICP 备 19144283 号"
+    defaultTheme: light # dark, light
+    disableThemeToggle: false
+    disablePWA: false
+    disableBuSuanZi: false
+
+    ShowReadingTime: true
+    ShowWordNumber: true
+    ShowShareButtons: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: false
+    ShowFullTextinRSS: false
+    ShowAllPagesInArchive: true
+    ShowWormhole: true
+    ShowReprinted: true
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    disableAnchoredHeadings: false
+    disableAPlayer: false
+    comments: true
+    hidemeta: false
+    hideSummary: false
+    showtoc: true
+    tocopen: true
+
+    assets:
+        # disableHLJS: true # to disable highlight.js
+        # disableFingerprinting: true
+        favicon: "favicon.ico"
+#        favicon16x16: "<link / abs url>"
+#        favicon32x32: "<link / abs url>"
+        apple_touch_icon: "apple-touch-icon.png"
+        safari_pinned_tab: "apple-touch-icon.png"
+
+    # label:
+    #     text: "🏡 Frytea"
+    #     #icon: "🏠"
+    #     iconHeight: 35
+
+    # profile-mode
+    profileMode:
+        enabled: true  # needs to be explicitly set
+        title: 长街短梦    ## 🌱 煎茶
+        subtitle: "爱自由"
+        imageUrl: "https://wangyunzi.oss-cn-hangzhou.aliyuncs.com/article/e7a9cd8af9d13a88f7f5e8ffa1dd7806 (1).jpg"
+        imageWidth: 120
+        imageHeight: 120
+        # imageTitle: wangyunzi
+        buttons:
+            - name: 🌈生活
+              url: /life/
+            #- name: ⚙️ 技术
+            #  url: technology/
+            - name: ⭐阅读
+              url: /read/
+            # - name: 💡 灵感
+            #   url: ideas/
+            - name: 🕊️相册
+              url: /album/
+            #- name: 🗃 知库
+            #  url: https://wiki.frytea.com/
+            #- name: 📎 资源
+            #  url: https://res.frytea.com
+            # - name: 📜 旧书
+            #  url: https://blog.frytea.com
+            #- name: 🦉 Newsletter
+            #  url: https://frytea.hedwig.pub
+#            - name: 🛠 工具
+#              url: technology/app-list/
+#            - name: 📁 项目
+#              url: technology/projects/
+
+    # home-info mode
+#    homeInfoParams:
+#        Title: "Hi there \U0001F44B"
+#        Content: Welcome to my blog
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/wangyunzi"
+        - name: telegram
+          url: "https://t.me/YunziWa"
+        - name: email
+          url: "mailto:wangyunzi@aliyun.com"
+        - name: twitter
+          url:  "https://twitter.com/YunziWang"
+        - name: facebook
+          url: "https://www.facebook.com/YunziWang4"
+        - name: instagram
+          url: "https://www.instagram.com/yunziwang3"
+        #- name: QQ
+        #  url: "img/qq.png"
+        #- name: WeChat
+        #  url: "img/wechat.png"
+        #- name: bilibili
+        #  url: "https://space.bilibili.com/234461224"
+        #- name: linkedin
+        #  url: "https://www.linkedin.com/in/songtianlun/"
+        - name: rss
+          url: "/index.xml"
+
+    analytics:
+        # google:
+        #     SiteVerificationTag: "XYZabc"
+        # bing:
+        #     SiteVerificationTag: "XYZabc"
+        yandex:
+            SiteVerificationTag: "73b1a797f62c0e98"
+        baidu:
+            SiteVerificationTag: "code-gnOrbP1RyC"
+    baiduUnionVerify: "4c552c344295cb984c46ebe74962b067"
+    googleAdSense: ca-pub-7296634171837358
+    umamiCodeID: 3d947a98-2774-46b0-805f-fe2e4877a1d7
+
+    cover:
+        hidden: false # hide everywhere but not in structured data
+        hiddenInList: true # hide on list pages and home
+        hiddenInSingle: true # hide on single page
+        responsiveImages: false
+        linkFullImages: false
+
+    editPost:
+        URL: "https://github.com/songtianlun/songtianlun.github.io/edit/main/content"
+        Text: "PR" # edit text
+        appendFilePath: true # to append file path to Edit link
+
+    # for search
+    # https://fusejs.io/api/options.html
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+  
+    algolia:
+      vars: ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+      params: ["categories", "tags"]
+      appId: "SY75R7MWL1"
+      indexName: "article"
+      searchOnlyKey: "b41779cc74b4658395f902d11d3ade78"  # Search-Only API Key
+
+menu:
+    main:
+        #- identifier: categories
+        #  name: 分类   # 🗂
+        #  url: /categories/
+        #  weight: 10
+        #- identifier: tags
+        #  name: 标签 ##🏷️
+        #  url: /tags/
+        #  weight: 20
+        #- identifier: archives
+        #  name: 归档
+        #  url: /archives/
+        #  weight: 30
+        - identifier: posts
+          name: 随笔 ##✒️
+          url: /life/
+          weight: 10
+        - identifier: read
+          name: 阅读 ##⚙️
+          url: /read/
+          weight: 20
+        - identifier: about
+          name: 关于 ##🛠
+          url: /about/
+          weight: 30
+        - identifier: search
+          name: 搜索 ##🔍
+          url: /search/
+          weight: 40
+        - identifier: friend
+          name: 友链
+          url: /friend/
+          weight: 35
+        - identifier: friends
+          name: 朋友圈
+          url: /friends/
+          weight: 45
+        # - identifier: example
+        #   name: example.org
+        #   url: https://example.org
+        #   weight: 30
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+# pygmentsUseClasses: true
+# markup:
+#     highlight:
+#         # anchorLineNos: true
+#         codeFences: true
+#         guessSyntax: true
+#         lineNos: true
+#         style: monokai
+
+#### 允许 html 渲染 start ####
+blackfriday:
+extensionsmask: ["noIntraEmphasis"]
+fractions: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+#### 允许 html 渲染 end ####
+
