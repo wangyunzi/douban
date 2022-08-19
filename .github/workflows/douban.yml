@@ -22,7 +22,15 @@ jobs:
         format: csv
         dir: ./data/douban
 
-    - name: music
+    - name: book
+      uses: lizheming/doumark-action@master
+      with:
+        id: wangyunzi
+        type: book
+        format: csv
+        dir: ./data/douban
+        
+     - name: music
       uses: lizheming/doumark-action@master
       with:
         id: wangyunzi
